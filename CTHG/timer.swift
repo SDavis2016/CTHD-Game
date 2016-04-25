@@ -7,3 +7,7 @@
 //
 
 import GameKit
+/*    class func scheduledTimerWithTimeInterval(_ ti: 1,
+                                                invocation invocation: NSInvocation,
+                                                           repeats yesOrNo: Bool) -> NSTimer
+}*/
