@@ -34,11 +34,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func TrueButton(sender: AnyObject) {
+        if answerList[getRandomNumber()] == true {
+            Questions.text = "Correct"
+        } else {
+            Questions.text = "Incorrect"
+        }
+    }
+
+
+    @IBAction func FalseButton(sender: AnyObject) {
+        if answerList[getRandomNumber()] == false {
+            Questions.text = "Correct"
+        } else {
+            Questions.text = "False"
+        }
+    }
 
 }
-
-/*func getRandomColor() -> UIColor{
-    let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
-    return colors [randomNumber]
-}
-*/
