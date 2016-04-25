@@ -8,6 +8,7 @@
 
 import GameKit
 /*
+
 struct Timer {
     init(fireDate date: NSDate,
         interval ti: NSTimeInterval,
@@ -17,4 +18,10 @@ struct Timer {
         repeats rep: Bool)
 }
 let timer = Timer(fireDate: <#T##NSDate#>, interval: 1, target: <#T##AnyObject#>, selector: <#T##Selector#>, userInfo: <#T##AnyObject?#>, repeats: <#T##Bool#>)
+if timerIndicator == 0 {
+    "You are out of time"
+    timer.Timer.repeats = false
+}else {
+    "You still have time"
+}
 */
