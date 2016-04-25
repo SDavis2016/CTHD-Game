@@ -29,3 +29,9 @@ class ViewController: UIViewController {
 
 }
 
+/*func getRandomColor() -> UIColor{
+    let randomNumber =
+        GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
+    return colors [randomNumber]
+}
+*/

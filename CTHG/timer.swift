@@ -7,7 +7,28 @@
 //
 
 import GameKit
-/*    class func scheduledTimerWithTimeInterval(_ ti: 1,
-                                                invocation invocation: NSInvocation,
-                                                           repeats yesOrNo: Bool) -> NSTimer
-}*/
+/*   class func scheduledTimerWithTimeInterval(_ ti:,
+                                                invocation timer(1): NSInvocation,
+                                                           repeats yesOrNo: Bool) -> NSTimer {
+var trackOfTime = "You still have Time"
+
+func timer(){
+var timer:NSTimer = 
+if timer > 0{
+trackOfTime = "You still have Time"
+yesOrNo = true
+} else {
+trackOfTime = "You are out of Time"
+yesOrNo = false
+}
+}
+
+ return timer
+}
+init(fireDate date: NSDate,
+interval ti: NSTimeInterval,
+target t: AnyObject,
+selector s: Selector,
+userInfo ui: AnyObject?,
+repeats rep: Bool)
+*/
