@@ -8,4 +8,4 @@
 
 import Foundation
 
-var questionList :[String] = ["Madness is like Gravity. All it takes is a little push."]
+var questionList :[String] = ["Madness is like Gravity. All it takes is a little push.", "Jhon Keats is a Romantic poet", "Velcro in the inside of atronaughts helmets is to hold their gum"]

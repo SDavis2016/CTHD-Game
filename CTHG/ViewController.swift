@@ -15,11 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var Lives: UILabel!
     @IBOutlet weak var Questions: UILabel!
     
+    func getRandomNumber() -> Int {
+        let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
+        return randomnumber
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         Timer.text = "15"
         Lives.text = "❤️❤️❤️❤️"
+        Questions.text = questionList[getRandomNumber()]
     }
     
 
@@ -32,8 +38,7 @@ class ViewController: UIViewController {
 }
 
 /*func getRandomColor() -> UIColor{
-    let randomNumber =
-        GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
+    let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
     return colors [randomNumber]
 }
 */
