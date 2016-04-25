@@ -132,6 +132,7 @@
                     </view>
                     <connections>
                         <outlet property="Lives" destination="sT1-bI-bYJ" id="Cpk-f2-m8X"/>
+                        <outlet property="Questions" destination="2sP-0e-ob2" id="mW9-3o-tyS"/>
                         <outlet property="Timer" destination="750-6h-vNN" id="veI-Xb-Mv3"/>
                     </connections>
                 </viewController>
