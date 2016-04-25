@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var Timer: UILabel!
     @IBOutlet weak var Lives: UILabel!
+    @IBOutlet weak var Questions: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
