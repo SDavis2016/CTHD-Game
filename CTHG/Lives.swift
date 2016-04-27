@@ -8,6 +8,8 @@
 
 import Foundation
 // When timer runs out or wrong answer lives decrease by one
+var answer = ""
+var lifeNumber = 4
 
 var timerIndicator = 15
 var answer = true
