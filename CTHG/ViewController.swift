@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Timer.text = "15"
+        Timer.text = "10"
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[x]
         Verification.text = ""
@@ -63,7 +63,9 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
+        if x < questionList.count {
         Questions.text = questionList[x]
+        }
     }
 
 
@@ -91,14 +93,16 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
-        Questions.text = questionList[x+1]
+        if x < questionList.count {
+        Questions.text = questionList[x]
+        }
     }
 
     //timer
     var countdownTimer: NSTimer!
-    var countdown: Int = 15
+    var countdown: Int = 10
     override func viewDidAppear(animated: Bool) {
-        self.countdown = 15
+        self.countdown = 10
         self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
     }
     
