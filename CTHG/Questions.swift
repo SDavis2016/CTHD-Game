@@ -12,3 +12,4 @@ var questionList :[String] = ["Madness is like Gravity. All it takes is a little
 
 var answerList :[Int: Bool] = [0:true, 1:true, 2:false]
 
+
