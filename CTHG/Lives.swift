@@ -8,19 +8,15 @@
 
 import Foundation
 // When timer runs out or wrong answer lives decrease by one
-/*
-var timerIndicator = 15
-var answer = true
+var answer = ""
+var lifeNumber = 4
 
-func countingOfLives(amt: Int) -> Int {
-    var lives = amt
-    if timerIndicator == 0 {
-        lives -= lives
+func countingOfLives() -> Int {
+        if answer == "Incorrect" {
+    lifeNumber = lifeNumber - 1
     }
-    if answer == false {
-        lives -= lives
-    }
-    return lives
+    return lifeNumber
 }
-*/
+
+
 

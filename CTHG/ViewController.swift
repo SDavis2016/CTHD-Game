@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[x]
         Verification.text = ""
+        
     }
     
 
@@ -45,10 +46,24 @@ class ViewController: UIViewController {
             Verification.backgroundColor = UIColor.greenColor()
         } else {
             Verification.text = "Incorrect"
+            answer = "Incorrect"
             Verification.textColor = UIColor.blackColor()
             Verification.backgroundColor = UIColor.redColor()
+            if lifeNumber == 4 {
+                Lives.text = "❤️❤️❤️❤️"
+            } else if lifeNumber == 3 {
+                Lives.text = "❤️❤️❤️"
+            } else if lifeNumber == 2 {
+                Lives.text = "❤️❤️"
+            } else if lifeNumber == 1 {
+                Lives.text = "❤️"
+            } else if lifeNumber == 0 {
+                Lives.text = ""
+                Questions.text = "Game Over"
+            }
         }
-        x = x+1
+        x=x+1
+        Questions.text = questionList[x]
     }
 
 
@@ -59,10 +74,24 @@ class ViewController: UIViewController {
             Verification.backgroundColor = UIColor.greenColor()
         } else {
             Verification.text = "Incorrect"
+            answer = "Incorrect"
             Verification.textColor = UIColor.blackColor()
             Verification.backgroundColor = UIColor.redColor()
+            if lifeNumber == 4 {
+                Lives.text = "❤️❤️❤️❤️"
+            } else if lifeNumber == 3 {
+                Lives.text = "❤️❤️❤️"
+            } else if lifeNumber == 2 {
+                Lives.text = "❤️❤️"
+            } else if lifeNumber == 1 {
+                Lives.text = "❤️"
+            } else if lifeNumber == 0 {
+                Lives.text = ""
+                Questions.text = "Game Over"
+            }
         }
-        x = x+1
+        x=x+1
+        Questions.text = questionList[x+1]
     }
 
     //timer
@@ -70,7 +99,8 @@ class ViewController: UIViewController {
     var countdown: Int = 15
     override func viewDidAppear(animated: Bool) {
         self.countdown = 15
-        self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true) }
+        self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
+    }
     
     func updateCountdown() {
         
