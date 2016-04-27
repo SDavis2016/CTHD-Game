@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Timer: UILabel!
     @IBOutlet weak var Lives: UILabel!
     @IBOutlet weak var Questions: UILabel!
+    @IBOutlet weak var Verification: UILabel!
     
     func getRandomNumber() -> Int {
         let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
         Timer.text = "15"
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[getRandomNumber()]
+        Verification.text = ""
     }
     
 
@@ -36,18 +38,26 @@ class ViewController: UIViewController {
 
     @IBAction func TrueButton(sender: AnyObject) {
         if answerList[getRandomNumber()] == true {
-            Questions.text = "Correct"
+            Verification.text = "Correct"
+            Verification.textColor = UIColor.whiteColor()
+            Verification.backgroundColor = UIColor.greenColor()
         } else {
-            Questions.text = "Incorrect"
+            Verification.text = "Incorrect"
+            Verification.textColor = UIColor.blackColor()
+            Verification.backgroundColor = UIColor.redColor()
         }
     }
 
 
     @IBAction func FalseButton(sender: AnyObject) {
         if answerList[getRandomNumber()] == false {
-            Questions.text = "Correct"
+            Verification.text = "Correct"
+            Verification.textColor = UIColor.whiteColor()
+            Verification.backgroundColor = UIColor.greenColor()
         } else {
-            Questions.text = "False"
+            Verification.text = "False"
+            Verification.textColor = UIColor.blackColor()
+            Verification.backgroundColor = UIColor.redColor()
         }
     }
 
