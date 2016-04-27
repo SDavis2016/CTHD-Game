@@ -73,12 +73,10 @@ class ViewController: UIViewController {
         self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true) }
     
     func updateCountdown() {
-        
         Timer.text = "\(self.countdown)"
         self.countdown--
         if self.countdown < 0{
             self.countdownTimer.invalidate()
-            self.countdownTimer = nil
             Timer.text = "You are out of time"
         }
     }
