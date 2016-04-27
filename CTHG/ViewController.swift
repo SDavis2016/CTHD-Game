@@ -46,6 +46,7 @@ class ViewController: UIViewController {
             Verification.textColor = UIColor.blackColor()
             Verification.backgroundColor = UIColor.redColor()
         }
+        
     }
 
 
