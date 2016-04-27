@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Lives: UILabel!
     @IBOutlet weak var Questions: UILabel!
     @IBOutlet weak var Verification: UILabel!
+    @IBOutlet weak var Levels: UILabel!
     
    /* func getRandomNumber() -> Int {
         let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
@@ -67,6 +68,11 @@ class ViewController: UIViewController {
         } else if x < questionList.count {
             Questions.text = questionList[x]
         }
+        
+        if x == 12 {
+            Levels.text = "Level 2"
+            lifeNumber = 4
+        }
     }
 
 
@@ -111,7 +117,7 @@ class ViewController: UIViewController {
     
     func updateCountdown() {
         Timer.text = "\(self.countdown)"
-        self.countdown--
+        self.countdown -= 1
         if self.countdown < 0{
             self.countdownTimer.invalidate()
             Timer.text = "You are out of time"
