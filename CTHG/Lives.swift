@@ -11,9 +11,6 @@ import Foundation
 var answer = ""
 var lifeNumber = 4
 
-var timerIndicator = 15
-var answer = true
-
 func countingOfLives() -> Int {
         if answer == "Incorrect" {
     lifeNumber = lifeNumber - 1
