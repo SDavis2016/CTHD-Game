@@ -45,8 +45,8 @@ class ViewController: UIViewController {
             Verification.textColor = UIColor.whiteColor()
             Verification.backgroundColor = UIColor.greenColor()
         } else {
+            countingOfLives()
             Verification.text = "Incorrect"
-            answer = "Incorrect"
             Verification.textColor = UIColor.blackColor()
             Verification.backgroundColor = UIColor.redColor()
             if lifeNumber == 4 {
@@ -59,12 +59,13 @@ class ViewController: UIViewController {
                 Lives.text = "❤️"
             } else if lifeNumber == 0 {
                 Lives.text = ""
-                Questions.text = "Game Over"
             }
         }
         x=x+1
-        if x < questionList.count {
-        Questions.text = questionList[x]
+        if Lives.text == "" {
+            Questions.text = "Game Over"
+        } else if x < questionList.count {
+            Questions.text = questionList[x]
         }
     }
 
@@ -75,8 +76,8 @@ class ViewController: UIViewController {
             Verification.textColor = UIColor.whiteColor()
             Verification.backgroundColor = UIColor.greenColor()
         } else {
+            countingOfLives()
             Verification.text = "Incorrect"
-            answer = "Incorrect"
             Verification.textColor = UIColor.blackColor()
             Verification.backgroundColor = UIColor.redColor()
             if lifeNumber == 4 {
@@ -93,8 +94,10 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
-        if x < questionList.count {
-        Questions.text = questionList[x]
+        if Lives.text == "" {
+            Questions.text = "Game Over"
+        } else if x < questionList.count {
+            Questions.text = questionList[x]
         }
     }
 
