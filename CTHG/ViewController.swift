@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         if self.countdown < 0{
             self.countdownTimer.invalidate()
             self.countdownTimer = nil
-            Timer.text = "You are out of Time"
+            Timer.text = "You are out of time"
         }
     }
 }
