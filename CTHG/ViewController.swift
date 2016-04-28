@@ -22,16 +22,20 @@ class ViewController: UIViewController {
     return randomnumber
     }
  */
+    
     var x = 0
+    var playing = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Timer.text = "10"
+        x = 0
+        playing = true
+        Timer.text = "30"
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[x]
         Verification.text = ""
-        
+        Levels.text = "Level 1"
     }
     
 
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func TrueButton(sender: AnyObject) {
+        while playing == true {
         if answerList[x] == true {
             Verification.text = "Correct"
             Verification.textColor = UIColor.whiteColor()
@@ -60,28 +65,36 @@ class ViewController: UIViewController {
                 Lives.text = "❤️"
             } else if lifeNumber == 0 {
                 Lives.text = ""
+                Questions.text = "Game Over. Would you like to play again?"
             }
         }
         x=x+1
         if Lives.text == "" {
-            Questions.text = "Game Over"
+            playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
         }
         
-        if x == 12 {
+        if x == 13 {
             Levels.text = "Level 2"
             lifeNumber = 4
+        }
+         return
+        }
+        
+        if playing == false {
+            viewDidLoad()
         }
     }
 
 
     @IBAction func FalseButton(sender: AnyObject) {
-        if answerList[x] == false {
+        while playing == true {
+            if answerList[x] == false {
             Verification.text = "Correct"
             Verification.textColor = UIColor.whiteColor()
             Verification.backgroundColor = UIColor.greenColor()
-        } else {
+            } else {
             countingOfLives()
             Verification.text = "Incorrect"
             Verification.textColor = UIColor.blackColor()
@@ -96,31 +109,50 @@ class ViewController: UIViewController {
                 Lives.text = "❤️"
             } else if lifeNumber == 0 {
                 Lives.text = ""
-                Questions.text = "Game Over"
+                Questions.text = "Game Over. Would you like to play again?"
             }
         }
         x=x+1
         if Lives.text == "" {
-            Questions.text = "Game Over"
+            playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
+        }
+        if x == 13 {
+                Levels.text = "Level 2"
+                lifeNumber = 4
+        }
+            return
+        }
+        if playing == false {
+            Questions.text = "Goodbye"
         }
     }
 
     //timer
     var countdownTimer: NSTimer!
-    var countdown: Int = 10
+    var countdown: Int = 30
+    
     override func viewDidAppear(animated: Bool) {
-        self.countdown = 10
+        self.countdown = 30
         self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
     }
     
     func updateCountdown() {
         Timer.text = "\(self.countdown)"
         self.countdown -= 1
-        if self.countdown < 0{
-            self.countdownTimer.invalidate()
-            Timer.text = "You are out of time"
+        if playing == false {
+            return
         }
+        if self.countdown == 0{
+            self.countdownTimer.invalidate()
+            Questions.text = "Game Over. Would you like to play again?"
+            playing = false
+            return
+        }
+        if x == 13 {
+            self.countdown == 30
+        }
+        
     }
 }

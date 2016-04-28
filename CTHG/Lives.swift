@@ -20,18 +20,3 @@ func countingOfLives() -> Int {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
