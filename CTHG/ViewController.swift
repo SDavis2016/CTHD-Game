@@ -151,7 +151,7 @@ class ViewController: UIViewController {
             return
         }
         if x == 13 {
-            self.countdown == 30
+            
         }
         
     }
