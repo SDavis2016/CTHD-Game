@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         Questions.text = questionList[x]
         Verification.text = ""
         Levels.text = "Level 1"
+        TimeIsTicking()
     }
     
 
@@ -133,9 +134,12 @@ class ViewController: UIViewController {
     var countdownTimer: NSTimer!
     var countdown: Int = 30
     
-    override func viewDidAppear(animated: Bool) {
-        self.countdown = 30
-        self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
+    
+    func  TimeIsTicking() {
+        self.countdown = 60
+        self.countdownTimer =  NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
+        
+        
     }
     
     func updateCountdown() {
@@ -151,7 +155,7 @@ class ViewController: UIViewController {
             return
         }
         if x == 13 {
-            
+            TimeIsTicking()
         }
         
     }
