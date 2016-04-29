@@ -144,7 +144,7 @@ class ViewController: UIViewController {
         if playing == false {
             return
         }
-        if self.countdown == 0{
+        if self.countdown < 0{
             self.countdownTimer.invalidate()
             Questions.text = "Game Over. Would you like to play again?"
             playing = false
