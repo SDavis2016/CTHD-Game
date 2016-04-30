@@ -156,6 +156,7 @@ class ViewController: UIViewController {
         }
         if x == 13 {
             TimeIsTicking()
+            updateCountdown()
         }
         
     }
