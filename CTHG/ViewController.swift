@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var Questions: UILabel!
     @IBOutlet weak var Verification: UILabel!
     @IBOutlet weak var Levels: UILabel!
+    @IBOutlet weak var FalseButtonLabel: UIButton!
+    @IBOutlet weak var TrueButtonLabel: UIButton!
+    
     
    /* func getRandomNumber() -> Int {
         let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
@@ -39,9 +42,10 @@ class ViewController: UIViewController {
         Questions.text = questionList[x]
         Verification.text = ""
         Levels.text = "Level 1"
-        timeIsTicking()
         self.countdown = 30
         Timer.text = "\(self.countdown)"
+        FalseButtonLabel.layer.cornerRadius = 20
+        TrueButtonLabel.layer.cornerRadius = 20
     }
     
 
@@ -52,6 +56,9 @@ class ViewController: UIViewController {
 
     @IBAction func TrueButton(sender: AnyObject) {
         while playing == true {
+            if x == 0 {
+                timeIsTicking()
+            }
         if answerList[x] == true {
             Verification.text = "Correct"
             Verification.textColor = UIColor.whiteColor()
@@ -89,13 +96,25 @@ class ViewController: UIViewController {
         }
         
         if playing == false {
-            viewDidLoad()
+            x = 1
+            playing = true
+            Timer.text = "30"
+            Lives.text = "❤️❤️❤️❤️"
+            Questions.text = questionList[x]
+            Verification.text = ""
+            Levels.text = "Level 1"
+            self.countdown = 30
+            Timer.text = "\(self.countdown)"
         }
     }
 
 
     @IBAction func FalseButton(sender: AnyObject) {
         while playing == true {
+            if x == 0 {
+                Questions.text = "Just press true when you want to begin"
+                return
+            }
             if answerList[x] == false {
             Verification.text = "Correct"
             Verification.textColor = UIColor.whiteColor()
@@ -131,7 +150,7 @@ class ViewController: UIViewController {
             return
         }
         if playing == false {
-            Questions.text = "Goodbye"
+            Questions.text = "Goodbye! Press true to begin again"
         }
     }
 
@@ -151,13 +170,11 @@ class ViewController: UIViewController {
         self.countdown -= 1
         if playing == false {
             Timer.text = "0"
-            return
         }
         if self.countdown < 0{
             self.countdownTimer.invalidate()
             Questions.text = "Game Over. Would you like to play again?"
             playing = false
-            return
         }
         if x == 13 {
             self.countdown = 30
