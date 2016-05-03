@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var Questions: UILabel!
     @IBOutlet weak var Verification: UILabel!
     @IBOutlet weak var Levels: UILabel!
+    @IBOutlet weak var FalseButtonLabel: UIButton!
+    @IBOutlet weak var TrueButtonLabel: UIButton!
+    
     
    /* func getRandomNumber() -> Int {
         let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
@@ -42,6 +45,8 @@ class ViewController: UIViewController {
         timeIsTicking()
         self.countdown = 30
         Timer.text = "\(self.countdown)"
+        FalseButtonLabel.layer.cornerRadius = 20
+        TrueButtonLabel.layer.cornerRadius = 20
     }
     
 
