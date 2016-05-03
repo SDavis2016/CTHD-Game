@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     var x = 0
     var playing = true
     
+
+        
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,6 +39,9 @@ class ViewController: UIViewController {
         Questions.text = questionList[x]
         Verification.text = ""
         Levels.text = "Level 1"
+        timeIsTicking()
+        self.countdown = 30
+        Timer.text = "\(self.countdown)"
     }
     
 
@@ -69,7 +75,7 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
-        if Lives.text == "" {
+        if lifeNumber == 0 {
             playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
@@ -113,7 +119,7 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
-        if Lives.text == "" {
+        if lifeNumber == 0 {
             playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
@@ -133,24 +139,30 @@ class ViewController: UIViewController {
     var countdownTimer: NSTimer!
     var countdown: Int = 30
     
-    override func viewDidAppear(animated: Bool) {
+    
+    func timeIsTicking() {
         self.countdown = 30
-        self.countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
+        self.countdownTimer =  NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
+        
     }
     
     func updateCountdown() {
         Timer.text = "\(self.countdown)"
         self.countdown -= 1
         if playing == false {
+            Timer.text = "0"
             return
         }
-        if self.countdown == 0{
+        if self.countdown < 0{
             self.countdownTimer.invalidate()
             Questions.text = "Game Over. Would you like to play again?"
             playing = false
             return
         }
         if x == 13 {
+            self.countdown = 30
+            Timer.text = "\(self.countdown)"
+
             
         }
         
