@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     var x = 0
     var playing = true
     
+
+        
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,7 +39,9 @@ class ViewController: UIViewController {
         Questions.text = questionList[x]
         Verification.text = ""
         Levels.text = "Level 1"
-        TimeIsTicking()
+        timeIsTicking()
+        self.countdown = 30
+        Timer.text = "\(self.countdown)"
     }
     
 
@@ -70,7 +75,7 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
-        if Lives.text == "" {
+        if lifeNumber == 0 {
             playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
@@ -114,7 +119,7 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
-        if Lives.text == "" {
+        if lifeNumber == 0 {
             playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
@@ -135,10 +140,9 @@ class ViewController: UIViewController {
     var countdown: Int = 30
     
     
-    func  TimeIsTicking() {
-        self.countdown = 60
+    func timeIsTicking() {
+        self.countdown = 30
         self.countdownTimer =  NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
-        
         
     }
     
@@ -146,6 +150,7 @@ class ViewController: UIViewController {
         Timer.text = "\(self.countdown)"
         self.countdown -= 1
         if playing == false {
+            Timer.text = "0"
             return
         }
         if self.countdown < 0{
@@ -155,7 +160,10 @@ class ViewController: UIViewController {
             return
         }
         if x == 13 {
-            TimeIsTicking()
+            self.countdown = 30
+            Timer.text = "\(self.countdown)"
+
+            
         }
         
     }

@@ -10,7 +10,7 @@ import Foundation
 
 var questionList :[String] = [
     "Madness is like Gravity. All it takes is a little push.", "Jhon Keats is a Romantic poet", "Velcro in the inside of atronaughts helmets is to hold their gum", "Lightning never strikes in the same place twice.", "If you cry in space the tears just stick to your face.", "If you cut an earthworm in half, both halves can regrow their body.", "Humans can distinguish between over a trillion different smells.", "Adults have fewer bones than babies do.", "Napoleon Bonaparte was extremely short.", "Goldfish only have a memory of three seconds.", "There are more cells of bacteria in your body than there are human cells.", "true",
-    "true", "true", "true"
+    "You Reached Level 2! Press true to continue.", "true", "true"
 ]
 
 var answerList :[Int: Bool] = [
