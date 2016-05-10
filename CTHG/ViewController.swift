@@ -82,6 +82,7 @@ class ViewController: UIViewController {
             }
         }
         x=x+1
+            
         if lifeNumber == 0 {
             playing = false
         } else if x < questionList.count {
@@ -98,6 +99,7 @@ class ViewController: UIViewController {
         if playing == false {
             x = 1
             playing = true
+            lifeNumber = 4
             Timer.text = "30"
             Lives.text = "❤️❤️❤️❤️"
             Questions.text = questionList[x]
