@@ -78,7 +78,7 @@ class ViewController: UIViewController {
                 Lives.text = "❤️"
             } else if lifeNumber == 0 {
                 Lives.text = ""
-                Questions.text = "Game Over. Would you like to play again?"
+                Questions.text = "Game Over. Press true to play again."
             }
         }
         x=x+1
@@ -106,7 +106,7 @@ class ViewController: UIViewController {
             Verification.text = ""
             Levels.text = "Level 1"
             self.countdown = 30
-            Timer.text = "\(self.countdown)"
+            
         }
     }
 
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
                 Lives.text = "❤️"
             } else if lifeNumber == 0 {
                 Lives.text = ""
-                Questions.text = "Game Over. Would you like to play again?"
+                Questions.text = "Game Over. Press true to play again."
             }
         }
         x=x+1
@@ -152,7 +152,7 @@ class ViewController: UIViewController {
             return
         }
         if playing == false {
-            Questions.text = "Goodbye! Press true to begin again"
+            Questions.text = "Game Over. Press true to play again."
         }
     }
 
@@ -174,8 +174,8 @@ class ViewController: UIViewController {
             Timer.text = "0"
         }
         if self.countdown < 0{
-            self.countdownTimer.invalidate()
-            Questions.text = "Game Over. Would you like to play again?"
+            //self.countdownTimer.invalidate()
+            Questions.text = "Game Over. Press true to play again."
             playing = false
         }
         if x == 13 {
