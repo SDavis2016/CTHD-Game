@@ -92,6 +92,7 @@ class ViewController: UIViewController {
         if x == 13 {
             Levels.text = "Level 2"
             lifeNumber = 4
+            Lives.text = "❤️❤️❤️❤️"
         }
          return
         }
@@ -148,6 +149,7 @@ class ViewController: UIViewController {
         if x == 13 {
                 Levels.text = "Level 2"
                 lifeNumber = 4
+            Lives.text = "❤️❤️❤️❤️"
         }
             return
         }
@@ -187,3 +189,4 @@ class ViewController: UIViewController {
         
     }
 }
+v
