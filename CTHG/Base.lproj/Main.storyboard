@@ -100,7 +100,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ked-lY-6nf">
-                                <rect key="frame" x="269" y="161" width="62" height="24"/>
+                                <rect key="frame" x="269" y="141" width="62" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -109,6 +109,12 @@
                                 <rect key="frame" x="262" y="370" width="76" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.47450980392156861" green="0.45490196078431372" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question #/#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDz-uS-n2H">
+                                <rect key="frame" x="253" y="170" width="95" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -131,16 +137,20 @@
                             <constraint firstItem="ked-lY-6nf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VEh-S8-Blu"/>
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WxZ-6z-SyX"/>
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X3l-A2-SZ4"/>
+                            <constraint firstItem="CDz-uS-n2H" firstAttribute="top" secondItem="ked-lY-6nf" secondAttribute="bottom" constant="8" id="XmQ-zp-B1c"/>
                             <constraint firstItem="A66-h8-FTN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Z8A-0b-uIZ"/>
-                            <constraint firstItem="ked-lY-6nf" firstAttribute="top" secondItem="Htr-qy-Mka" secondAttribute="bottom" constant="50" id="ZXH-dT-xP7"/>
+                            <constraint firstItem="ked-lY-6nf" firstAttribute="top" secondItem="Htr-qy-Mka" secondAttribute="bottom" constant="30" id="ZXH-dT-xP7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2sP-0e-ob2" secondAttribute="trailing" constant="241" id="bho-5S-KYI"/>
                             <constraint firstItem="Htr-qy-Mka" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="eRJ-UO-Quz"/>
+                            <constraint firstItem="CDz-uS-n2H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgb-Vh-l9J"/>
                             <constraint firstItem="Htr-qy-Mka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lkQ-41-LJh"/>
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mqQ-p6-kVl"/>
                             <constraint firstItem="750-6h-vNN" firstAttribute="top" secondItem="2sP-0e-ob2" secondAttribute="bottom" constant="95" id="nX1-E8-EUZ"/>
                             <constraint firstItem="sT1-bI-bYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oZQ-Kb-eZL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sT1-bI-bYJ" secondAttribute="bottom" constant="50" id="qVe-o4-U0g"/>
+                            <constraint firstItem="CDz-uS-n2H" firstAttribute="top" secondItem="ked-lY-6nf" secondAttribute="bottom" constant="20" id="toM-wD-amQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2sP-0e-ob2" secondAttribute="trailing" constant="20" id="uxE-LP-1hg"/>
+                            <constraint firstItem="CDz-uS-n2H" firstAttribute="top" secondItem="ked-lY-6nf" secondAttribute="bottom" constant="5" id="vs0-Hb-p8R"/>
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="top" secondItem="Htr-qy-Mka" secondAttribute="bottom" constant="157" id="zsF-vf-X2F"/>
                         </constraints>
                         <variation key="default">
@@ -151,6 +161,8 @@
                                 <exclude reference="WxZ-6z-SyX"/>
                                 <exclude reference="bho-5S-KYI"/>
                                 <exclude reference="zsF-vf-X2F"/>
+                                <exclude reference="XmQ-zp-B1c"/>
+                                <exclude reference="toM-wD-amQ"/>
                                 <exclude reference="N2l-bc-YUV"/>
                                 <exclude reference="nX1-E8-EUZ"/>
                                 <exclude reference="GqE-NN-GwM"/>
@@ -162,6 +174,7 @@
                         <outlet property="FalseButtonLabel" destination="e37-MP-1at" id="gS5-tG-Zth"/>
                         <outlet property="Levels" destination="ked-lY-6nf" id="PtN-zM-Zmu"/>
                         <outlet property="Lives" destination="sT1-bI-bYJ" id="Cpk-f2-m8X"/>
+                        <outlet property="QuestionCOunter" destination="CDz-uS-n2H" id="hrw-Qt-VXe"/>
                         <outlet property="Questions" destination="2sP-0e-ob2" id="mW9-3o-tyS"/>
                         <outlet property="Timer" destination="750-6h-vNN" id="veI-Xb-Mv3"/>
                         <outlet property="TrueButtonLabel" destination="A66-h8-FTN" id="yuq-oZ-5Ur"/>
@@ -170,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="394"/>
+            <point key="canvasLocation" x="272" y="384"/>
         </scene>
     </scenes>
 </document>

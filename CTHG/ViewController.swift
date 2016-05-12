@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Levels: UILabel!
     @IBOutlet weak var FalseButtonLabel: UIButton!
     @IBOutlet weak var TrueButtonLabel: UIButton!
+    @IBOutlet weak var QuestionCOunter: UILabel!
     
     
    /* func getRandomNumber() -> Int {
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
         Timer.text = "\(self.countdown)"
         FalseButtonLabel.layer.cornerRadius = 20
         TrueButtonLabel.layer.cornerRadius = 20
+        QuestionCOunter.text = ""
     }
     
 
