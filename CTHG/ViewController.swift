@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         Timer.text = "\(self.countdown)"
         FalseButtonLabel.layer.cornerRadius = 20
         TrueButtonLabel.layer.cornerRadius = 20
-        QuestionCOunter.text = "Hm"
+        QuestionCOunter.text = ""
     }
     
 
@@ -96,11 +96,15 @@ class ViewController: UIViewController {
             Levels.text = "Level 2"
             lifeNumber = 4
             Lives.text = "❤️❤️❤️❤️"
+        } else if x == 26 {
+            Levels.text = "Level 3"
+            lifeNumber = 4
+            Lives.text = "❤️❤️❤️❤️"
         }
             //Question Counter
             Counter()
             if y == 0 {
-                QuestionCOunter.text = ""
+                QuestionCOunter.text = "New Level!"
             } else {
                 QuestionCOunter.text = "Question \(y)/12"
             }
@@ -118,6 +122,7 @@ class ViewController: UIViewController {
             Verification.text = ""
             Levels.text = "Level 1"
             self.countdown = 30
+            y=1
             
         }
         
@@ -164,11 +169,15 @@ class ViewController: UIViewController {
                 Levels.text = "Level 2"
                 lifeNumber = 4
             Lives.text = "❤️❤️❤️❤️"
-        }
+        } else if x == 26 {
+            Levels.text = "Level 3"
+            lifeNumber = 4
+            Lives.text = "❤️❤️❤️❤️"
+            }
             //Question Counter
             Counter()
             if y == 0 {
-                QuestionCOunter.text = "Zero"
+                QuestionCOunter.text = "New Level!"
             } else {
                 QuestionCOunter.text = "Question \(y)/12"
             }
