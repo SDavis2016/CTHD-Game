@@ -14,12 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var Timer: UILabel!
     @IBOutlet weak var Lives: UILabel!
     @IBOutlet weak var Questions: UILabel!
-    @IBOutlet weak var Verification: UILabel!
     @IBOutlet weak var Levels: UILabel!
     @IBOutlet weak var FalseButtonLabel: UIButton!
     @IBOutlet weak var TrueButtonLabel: UIButton!
     @IBOutlet weak var QuestionCOunter: UILabel!
-    
+    @IBOutlet weak var Verification: UIImageView!
     
    /* func getRandomNumber() -> Int {
         let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
@@ -40,7 +39,7 @@ class ViewController: UIViewController {
         Timer.text = "30"
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[x]
-        Verification.text = ""
+        Verification.image = UIImage(named: "blank")
         Levels.text = "Level 1"
         self.countdown = 30
         Timer.text = "\(self.countdown)"
@@ -61,14 +60,10 @@ class ViewController: UIViewController {
                 timeIsTicking()
             }
         if answerList[x] == true {
-            Verification.text = "Correct"
-            Verification.textColor = UIColor.whiteColor()
-            Verification.backgroundColor = UIColor.greenColor()
+            Verification.image = UIImage(named: "true")
         } else {
             countingOfLives()
-            Verification.text = "Incorrect"
-            Verification.textColor = UIColor.blackColor()
-            Verification.backgroundColor = UIColor.redColor()
+            Verification.image = UIImage(named: "false")
             if lifeNumber == 4 {
                 Lives.text = "❤️❤️❤️❤️"
             } else if lifeNumber == 3 {
@@ -95,10 +90,12 @@ class ViewController: UIViewController {
         if x == 13 {
             Levels.text = "Level 2"
             lifeNumber = 4
+            Verification.image = UIImage(named: "blank")
             Lives.text = "❤️❤️❤️❤️"
         } else if x == 26 {
             Levels.text = "Level 3"
             lifeNumber = 4
+            Verification.image = UIImage(named: "blank")
             Lives.text = "❤️❤️❤️❤️"
         }
             //Question Counter
@@ -119,7 +116,7 @@ class ViewController: UIViewController {
             Timer.text = "30"
             Lives.text = "❤️❤️❤️❤️"
             Questions.text = questionList[x]
-            Verification.text = ""
+            Verification.image = UIImage(named: "blank")
             Levels.text = "Level 1"
             self.countdown = 30
             y=1
@@ -136,14 +133,11 @@ class ViewController: UIViewController {
                 return
             }
             if answerList[x] == false {
-            Verification.text = "Correct"
-            Verification.textColor = UIColor.whiteColor()
-            Verification.backgroundColor = UIColor.greenColor()
+            Verification.image = UIImage(named: "true")
+         
             } else {
             countingOfLives()
-            Verification.text = "Incorrect"
-            Verification.textColor = UIColor.blackColor()
-            Verification.backgroundColor = UIColor.redColor()
+            Verification.image = UIImage(named: "false")
             if lifeNumber == 4 {
                 Lives.text = "❤️❤️❤️❤️"
             } else if lifeNumber == 3 {
