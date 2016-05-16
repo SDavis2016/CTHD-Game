@@ -7,6 +7,8 @@
 //
 
 import Foundation
+var y = 0
+var x = 0
 
 var questionList :[String] = [
     "Welcome to the True or False Challenge! Press true to begin!", "Jhon Keats is a Romantic poet", "Velcro in the inside of atronaughts helmets is to hold their gum", "Lightning never strikes in the same place twice.", "If you cry in space the tears just stick to your face.", "If you cut an earthworm in half, both halves can regrow their body.", "Humans can distinguish between over a trillion different smells.", "Adults have fewer bones than babies do.", "Napoleon Bonaparte was extremely short.", "Goldfish only have a memory of three seconds.", "There are more cells of bacteria in your body than there are human cells.", "Is the cake a lie","Your fingernails and hair keep growing after you die.",
@@ -27,3 +29,22 @@ var answerList :[Int: Bool] = [
 ]
 
 
+
+
+func Counter() {
+    if x < 13 {
+    y = x
+    }
+    if x == 13 {
+        y = 0
+    }
+    if x > 13 && x < 26 {
+        y = x - 13
+    }
+    if x == 26 {
+        y = 0
+    }
+    if x > 26 && x < 38 {
+        y = x - 26
+    }
+}

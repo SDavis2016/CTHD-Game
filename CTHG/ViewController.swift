@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     }
  */
     
-    var x = 0
     var playing = true
     
 
@@ -47,7 +46,7 @@ class ViewController: UIViewController {
         Timer.text = "\(self.countdown)"
         FalseButtonLabel.layer.cornerRadius = 20
         TrueButtonLabel.layer.cornerRadius = 20
-        QuestionCOunter.text = ""
+        QuestionCOunter.text = "Hm"
     }
     
 
@@ -89,13 +88,23 @@ class ViewController: UIViewController {
             playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
-        }
+        } else if x == questionList.count {
+            Questions.text = "Congrats you have completed all the avalible levels! Check back soon for an update with more Questions."
+            }
         
         if x == 13 {
             Levels.text = "Level 2"
             lifeNumber = 4
             Lives.text = "❤️❤️❤️❤️"
         }
+            //Question Counter
+            Counter()
+            if y == 0 {
+                QuestionCOunter.text = ""
+            } else {
+                QuestionCOunter.text = "Question \(y)/12"
+            }
+
          return
         }
         
@@ -111,6 +120,7 @@ class ViewController: UIViewController {
             self.countdown = 30
             
         }
+        
     }
 
 
@@ -147,18 +157,29 @@ class ViewController: UIViewController {
             playing = false
         } else if x < questionList.count {
             Questions.text = questionList[x]
-        }
+        } else if x == questionList.count {
+            Questions.text = "Congrats you have completed all the avalible levels! Check back soon for an update with more Questions."
+            }
         if x == 13 {
                 Levels.text = "Level 2"
                 lifeNumber = 4
             Lives.text = "❤️❤️❤️❤️"
         }
+            //Question Counter
+            Counter()
+            if y == 0 {
+                QuestionCOunter.text = "Zero"
+            } else {
+                QuestionCOunter.text = "Question \(y)/12"
+            }
+
             return
         }
         if playing == false {
             Questions.text = "Game Over. Press true to play again."
         }
-    }
+        
+}
 
     //timer
     var countdownTimer: NSTimer!
