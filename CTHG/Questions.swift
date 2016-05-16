@@ -44,7 +44,7 @@ func Counter() {
     if x == 26 {
         y = 0
     }
-    if x > 26 && x < 38 {
+    if x > 26 && x < 39 {
         y = x - 26
     }
 }

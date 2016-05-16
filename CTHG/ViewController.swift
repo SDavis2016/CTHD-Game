@@ -20,29 +20,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var TrueButtonLabel: UIButton!
     @IBOutlet weak var QuestionCOunter: UILabel!
     
-    
-   /* func getRandomNumber() -> Int {
-        let randomnumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(questionList.count)
-    return randomnumber
-    }
- */
-    
     var playing = true
     
-
-        
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         x = 0
         playing = true
-        Timer.text = "30"
+        Timer.text = "60"
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[x]
         Verification.text = ""
         Levels.text = "Level 1"
-        self.countdown = 30
+        self.countdown = 60
         Timer.text = "\(self.countdown)"
         FalseButtonLabel.layer.cornerRadius = 20
         TrueButtonLabel.layer.cornerRadius = 20
@@ -89,7 +79,8 @@ class ViewController: UIViewController {
         } else if x < questionList.count {
             Questions.text = questionList[x]
         } else if x == questionList.count {
-            Questions.text = "Congrats you have completed all the avalible levels! Check back soon for an update with more Questions."
+            Questions.text = "Congrats you have completed all the avalible levels! Check back soon for an update with more questions. Press true to play again"
+            playing = false
             }
         
         if x == 13 {
@@ -116,13 +107,14 @@ class ViewController: UIViewController {
             x = 1
             playing = true
             lifeNumber = 4
-            Timer.text = "30"
+            Timer.text = "60"
             Lives.text = "❤️❤️❤️❤️"
             Questions.text = questionList[x]
             Verification.text = ""
             Levels.text = "Level 1"
-            self.countdown = 30
-            y=1
+            self.countdown = 60
+            y = 1
+            QuestionCOunter.text = "Question \(y)/12"
             
         }
         
@@ -163,7 +155,8 @@ class ViewController: UIViewController {
         } else if x < questionList.count {
             Questions.text = questionList[x]
         } else if x == questionList.count {
-            Questions.text = "Congrats you have completed all the avalible levels! Check back soon for an update with more Questions."
+            Questions.text = "Congrats you have completed all the avalible levels! Check back soon for an update with more questions. Press true to play again"
+            playing = false
             }
         if x == 13 {
                 Levels.text = "Level 2"
@@ -185,18 +178,22 @@ class ViewController: UIViewController {
             return
         }
         if playing == false {
+            if x == 39 {
+                return
+            }else {
             Questions.text = "Game Over. Press true to play again."
+            }
         }
         
 }
 
     //timer
     var countdownTimer: NSTimer!
-    var countdown: Int = 30
+    var countdown: Int = 60
     
     
     func timeIsTicking() {
-        self.countdown = 30
+        self.countdown = 60
         self.countdownTimer =  NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
         
     }
@@ -213,11 +210,12 @@ class ViewController: UIViewController {
             playing = false
         }
         if x == 13 {
-            self.countdown = 30
+            self.countdown = 60
             Timer.text = "\(self.countdown)"
-
-            
-        }
+        }else if x == 26 {
+            self.countdown = 60
+            Timer.text = "\(self.countdown)"
+        } 
         
     }
 }
