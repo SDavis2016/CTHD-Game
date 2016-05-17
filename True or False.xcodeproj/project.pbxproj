@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		DC1981BC1CCE92F700553C15 /* Lives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lives.swift; sourceTree = "<group>"; };
 		DC1981BE1CCE93EB00553C15 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		DC34EFE51CC949ED00FD62E6 /* CTHG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTHG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC34EFE51CC949ED00FD62E6 /* True or False.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "True or False.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC34EFE81CC949ED00FD62E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC34EFEA1CC949ED00FD62E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC34EFED1CC949ED00FD62E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		DC34EFE61CC949ED00FD62E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC34EFE51CC949ED00FD62E6 /* CTHG.app */,
+				DC34EFE51CC949ED00FD62E6 /* True or False.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC34EFE41CC949ED00FD62E6 /* CTHG */ = {
+		DC34EFE41CC949ED00FD62E6 /* True or False */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC34EFF71CC949ED00FD62E6 /* Build configuration list for PBXNativeTarget "CTHG" */;
+			buildConfigurationList = DC34EFF71CC949ED00FD62E6 /* Build configuration list for PBXNativeTarget "True or False" */;
 			buildPhases = (
 				DC34EFE11CC949ED00FD62E6 /* Sources */,
 				DC34EFE21CC949ED00FD62E6 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = CTHG;
+			name = "True or False";
 			productName = CTHG;
-			productReference = DC34EFE51CC949ED00FD62E6 /* CTHG.app */;
+			productReference = DC34EFE51CC949ED00FD62E6 /* True or False.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC34EFE01CC949ED00FD62E6 /* Build configuration list for PBXProject "CTHG" */;
+			buildConfigurationList = DC34EFE01CC949ED00FD62E6 /* Build configuration list for PBXProject "True or False" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC34EFE41CC949ED00FD62E6 /* CTHG */,
+				DC34EFE41CC949ED00FD62E6 /* True or False */,
 			);
 		};
 /* End PBXProject section */
@@ -259,8 +259,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CTHG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.epicgaming.CTHG;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epicgaming.TrueorFalse;
+				PRODUCT_NAME = "True or False";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -270,15 +271,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CTHG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.epicgaming.CTHG;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epicgaming.TrueorFalse;
+				PRODUCT_NAME = "True or False";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC34EFE01CC949ED00FD62E6 /* Build configuration list for PBXProject "CTHG" */ = {
+		DC34EFE01CC949ED00FD62E6 /* Build configuration list for PBXProject "True or False" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC34EFF51CC949ED00FD62E6 /* Debug */,
@@ -287,7 +289,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC34EFF71CC949ED00FD62E6 /* Build configuration list for PBXNativeTarget "CTHG" */ = {
+		DC34EFF71CC949ED00FD62E6 /* Build configuration list for PBXNativeTarget "True or False" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC34EFF81CC949ED00FD62E6 /* Debug */,

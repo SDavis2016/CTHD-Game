@@ -176,6 +176,8 @@
                         <outlet property="QuestionCOunter" destination="CDz-uS-n2H" id="hrw-Qt-VXe"/>
                         <outlet property="Questions" destination="2sP-0e-ob2" id="mW9-3o-tyS"/>
                         <outlet property="Timer" destination="750-6h-vNN" id="veI-Xb-Mv3"/>
+                        <outlet property="Title" destination="Htr-qy-Mka" id="rkw-hn-iec"/>
+                        <outlet property="ToFTitle" destination="Htr-qy-Mka" id="p02-Iu-wZU"/>
                         <outlet property="TrueButtonLabel" destination="A66-h8-FTN" id="yuq-oZ-5Ur"/>
                         <outlet property="Verification" destination="2LC-RY-Y6o" id="Vcf-04-t5E"/>
                     </connections>
