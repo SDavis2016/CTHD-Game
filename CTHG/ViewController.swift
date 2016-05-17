@@ -204,8 +204,12 @@ class ViewController: UIViewController {
             playing = false
         }
         if x == 13 {
-            TimeIsTicking()
-        }
+            self.countdown = 60
+            Timer.text = "\(self.countdown)"
+        }else if x == 26 {
+            self.countdown = 60
+            Timer.text = "\(self.countdown)"
+        } 
         
     }
 }
