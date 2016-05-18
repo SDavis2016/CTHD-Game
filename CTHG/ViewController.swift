@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         Timer.text = "\(self.countdown)"
         FalseButtonLabel.layer.cornerRadius = 20
         TrueButtonLabel.layer.cornerRadius = 20
+        ToFTitle.layer.cornerRadius = 20
         QuestionCOunter.text = ""
     }
     
