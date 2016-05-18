@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var FalseButtonLabel: UIButton!
     @IBOutlet weak var TrueButtonLabel: UIButton!
     @IBOutlet weak var QuestionCOunter: UILabel!
+    @IBOutlet weak var Verification: UIImageView!
     
     var playing = true
     
