@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="True or False?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htr-qy-Mka">
-                                <rect key="frame" x="170" y="70" width="260" height="41"/>
+                                <rect key="frame" x="70" y="70" width="460" height="41"/>
                                 <color key="backgroundColor" red="0.47450980390000003" green="0.4549019608" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="WVr-GT-9II"/>
@@ -136,7 +136,7 @@
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WxZ-6z-SyX"/>
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X3l-A2-SZ4"/>
                             <constraint firstItem="CDz-uS-n2H" firstAttribute="top" secondItem="ked-lY-6nf" secondAttribute="bottom" constant="8" id="XmQ-zp-B1c"/>
-                            <constraint firstItem="Htr-qy-Mka" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="Y5T-N9-Qqy"/>
+                            <constraint firstItem="Htr-qy-Mka" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Y5T-N9-Qqy"/>
                             <constraint firstItem="A66-h8-FTN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Z8A-0b-uIZ"/>
                             <constraint firstItem="ked-lY-6nf" firstAttribute="top" secondItem="Htr-qy-Mka" secondAttribute="bottom" constant="30" id="ZXH-dT-xP7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2sP-0e-ob2" secondAttribute="trailing" constant="241" id="bho-5S-KYI"/>
@@ -150,7 +150,7 @@
                             <constraint firstItem="sT1-bI-bYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oZQ-Kb-eZL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sT1-bI-bYJ" secondAttribute="bottom" constant="50" id="qVe-o4-U0g"/>
                             <constraint firstItem="CDz-uS-n2H" firstAttribute="top" secondItem="ked-lY-6nf" secondAttribute="bottom" constant="20" id="toM-wD-amQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Htr-qy-Mka" secondAttribute="trailing" constant="150" id="uA3-uE-Eer"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Htr-qy-Mka" secondAttribute="trailing" constant="50" id="uA3-uE-Eer"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2sP-0e-ob2" secondAttribute="trailing" constant="20" id="uxE-LP-1hg"/>
                             <constraint firstItem="CDz-uS-n2H" firstAttribute="top" secondItem="ked-lY-6nf" secondAttribute="bottom" constant="5" id="vs0-Hb-p8R"/>
                             <constraint firstItem="2sP-0e-ob2" firstAttribute="top" secondItem="Htr-qy-Mka" secondAttribute="bottom" constant="157" id="zsF-vf-X2F"/>
