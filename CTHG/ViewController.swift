@@ -28,12 +28,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         x = 0
         playing = true
-        Timer.text = "60"
+        Timer.text = "30"
         Lives.text = "❤️❤️❤️❤️"
         Questions.text = questionList[x]
         Verification.image = UIImage(named: "blank")
         Levels.text = "Level 1"
-        self.countdown = 60
+        self.countdown = 30
         Timer.text = "\(self.countdown)"
         FalseButtonLabel.layer.cornerRadius = 20
         TrueButtonLabel.layer.cornerRadius = 20
@@ -108,12 +108,12 @@ class ViewController: UIViewController {
             x = 1
             playing = true
             lifeNumber = 4
-            Timer.text = "60"
+            Timer.text = "30"
             Lives.text = "❤️❤️❤️❤️"
             Questions.text = questionList[x]
             Verification.image = UIImage(named: "blank")
             Levels.text = "Level 1"
-            self.countdown = 60
+            self.countdown = 30
             y = 1
             QuestionCOunter.text = "Question \(y)/12"
             
@@ -187,11 +187,11 @@ class ViewController: UIViewController {
 
     //timer
     var countdownTimer: NSTimer!
-    var countdown: Int = 60
+    var countdown: Int = 30
     
     
     func timeIsTicking() {
-        self.countdown = 60
+        self.countdown = 30
         self.countdownTimer =  NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
         
     }
@@ -208,10 +208,10 @@ class ViewController: UIViewController {
             playing = false
         }
         if x == 13 {
-            self.countdown = 60
+            self.countdown = 30
             Timer.text = "\(self.countdown)"
         }else if x == 26 {
-            self.countdown = 60
+            self.countdown = 30
             Timer.text = "\(self.countdown)"
         } 
         
